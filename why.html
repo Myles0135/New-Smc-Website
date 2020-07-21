@@ -1,0 +1,327 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.css" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script type="text/javascript"></script>
+        <script src="jquery.min.js"></script>
+        
+        <style>
+            .topnav {
+                border-bottom: 1px solid #000000;
+                padding-top: 1%;
+                position: fixed;
+                top: 0;
+                width: 100%;    
+                letter-spacing: 0.8px;
+                padding-bottom: 1.2%;
+                opacity: 1.0;
+                background-color: white;
+                z-index: 99;
+            }
+
+            .services {
+                display: inline;
+                font-size: 20px;
+                font-family: 'Raleway', sans-serif;
+                font-size: 18px;
+                margin-left: 8%;
+            }
+
+            .quality {
+                display: inline;
+                font-size: 18px;
+                font-family: 'Raleway', sans-serif;
+                margin-left: 7%;
+            }
+
+            .training {
+                display: inline;
+                font-size: 18px;
+                font-family: 'Raleway', sans-serif;
+                margin-left: 10%;
+            }
+
+            .why {
+                display: inline;
+                font-size: 18px;
+                font-family: 'Raleway', sans-serif;
+                margin-left: 10%;
+            }
+
+            .covid {
+                display: inline;
+                font-size: 18px;
+                font-family: 'Raleway', sans-serif;
+                margin-left: 7%;
+                
+            }
+
+            .logo {
+                display: inline-block;
+                margin-left: 5%;
+            }
+
+            .fpage {
+                width: 100%;
+                height: 90%;
+                opacity: 0.9;
+                filter: brightness(50%);
+            }
+
+            .cpage {
+                padding: 0;
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+
+            .super {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'Oswald', sans-serif;
+                font-size: 60px;
+                color: white;
+                display:none;
+            }
+
+            .ctnt {
+                font-family: 'Montserrat', sans-serif;
+                font-weight:400;
+                background-color: #EDEDF7;
+                color: black;
+                letter-spacing: 1.5px;
+                text-align: center;
+                box-shadow: 2px 2px 7px 1px #B0B0B0;
+            }
+
+            .bdytxt {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+
+            .ctnt2 {
+                font-family: 'Montserrat', sans-serif;
+                font-weight:400;
+                background-color: black;
+                color: white;
+                padding: 15px;
+                text-align: left;
+                letter-spacing: 1.5px;
+            }
+
+            .ctnt3 {
+                font-family: 'Montserrat', sans-serif;
+                font-weight:400;
+                background-color: black;
+                color: white;
+                padding: 15px;
+                text-align: center;
+            }
+
+            .bdyhdr {
+                font-size: 30px;
+                text-align: center;
+                border-bottom: 1px double #000000;
+                padding-top: 3%;
+            }
+            .rtxt {
+                color: red;
+            }
+
+            .nlogo {
+                float: left;
+                width: 30%;
+                height: 30%;
+                margin-left: 60px;
+            }
+
+            .btxt {
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            ul {
+                list-style-position:inside;
+            }
+
+            .hvr-grow {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-property: transform;
+                transition-property: transform;
+            }
+            
+            .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+
+            .mail {
+                color: red;
+            }
+
+            .mail:hover {
+                color: #A80505;
+            }
+
+            .ct1 {
+                margin-top: 10%;
+            }
+
+            .container-width {
+                width: 80%;
+                margin-top: 12%;
+            }
+
+            ul {
+                list-style: none;
+                font-family: 'Montserrat', sans-serif;
+                padding: 0;
+                margin: 0;
+                font-size: 17px;
+            }
+
+            .col-md-2 {
+                padding-left: 0;
+            }      
+
+            @media screen and (max-width: 600px) {
+            .container-width {
+                margin-top: 25%;
+            }
+            } 
+
+            .service-image {
+                max-width:40%;
+                max-height:40%;
+                float: right;
+            }  
+
+            ul {
+                list-style: none;
+            }
+
+            ul li::before {
+                content: "\2022";  
+                color: red; 
+                font-weight: bold; 
+                display: inline-block; 
+                width: 1em; 
+                margin-left: 3%;
+                padding: 4%;
+            } 
+
+            a { 
+                color: inherit; 
+            } 
+
+            a:hover {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .portal:hover {
+                color: #A80505;
+                text-decoration: none;
+            }
+
+            .row {
+                background-color: white;
+                letter-spacing: 1px;
+                text-align: left;
+                margin: 25px;
+            }
+
+            .btmp {
+                margin-top: 12%;
+            }
+
+        </style>
+    </head>
+
+    <body name="top">
+        <div class="topnav">
+            <a href="services.html" class="services animate hvr-grow">Services</a>
+            <a href="quality.html" class="quality animate hvr-grow">Quality</a>
+            <a href="covid.html" class="covid animate hvr-grow">COVID-19</a>
+            <a class="logo animate hvr-grow" href="index.html"><img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/99470/logo" alt="SRC Logo" width="130" height="50"></a>
+            <a href="training.html" class="training animate hvr-grow">Training</a>
+            <a href=#top class="why animate hvr-grow">Why SMC?</a>
+        </div>
+
+
+        <div class="container container-width ctnt">
+            <p class="bdyhdr">WHY USE SMC?</p>
+            <div class="row">
+                <div class="col-6">
+                    <p>Quality Culture</p>
+                    <br>
+                    <p>Commitment to Total Quality Management</p>
+                    <br>
+                    <p>ISO 9001:2000 & ISO 14001 Certified</p>
+                    <br>
+                    <p>Proven Supplier Partner</p>
+                    <br>
+                    <p>Experience Management Team</p>
+                    <br>
+                    <p>2003 KMSDC Supplier of the Year</p>
+                    <br>
+                    <p>2004 NMSDC Corporate Plus Member</p>
+                </div>
+
+                <div class="col-6">
+                    <p>2004 Toyota APP Supplier Award Winner</p>
+                    <br>
+                    <p>2005 National Supplier of the Year</p>
+                    <br>
+                    <p>2006 Centers of Excellence</p>
+                    <br>
+                    <p>2006 NMSDC Supplier of the Year</p>
+                    <br>
+                    <p>2007 Lynx Service Partner of the Year</p>
+                    <br>
+                    <p>2007 NMSDC Supplier of the Year Nominee</p>
+                    <br>
+                    <p>2009 TSMSDC Supplier of the Year</p>
+                </div>
+            </div>
+            <p><strong>Maintains More Automotive Manufacturers than any other Supplier in North America</strong></p>
+            <br>
+        </div>
+
+        <div class="container container-width ctnt2">
+            <br>
+            <p class="bdytxt"><span class="rtxt">Our History: SMC</span> began operations in the Elizabethtown, Kentucky area in 1988. <span class="rtxt">SMC</span> has grown successfully year by year because of their commitment to quality service.</p>
+            <br>
+            <br>
+            <p class="bdytxt"><span class="rtxt">Our Vision: </span>To revolutionize the Building Maintenance Industry by achieving new standards of quality and productivity that is significantly above current industry standards. We must create a culture within our company that will in turn create quality minded employees and the quality performance through teamwork. By integrating this quality consciousness within ourselves, we will become that premier provider of building maintenance services.</p>
+            <br>
+            <br>
+            <p class="bdytxt"><span class="rtxt">Mission Statement:</span> "We shall exceed the customer’s expectations through dedication to anticipating and satisfying customer needs while providing services of superior quality, value and delivery through teamwork."</p>
+        </div>
+
+        <br>
+        <div class="container-fluid ctnt3 btmp">
+            <p class="bdytxt">To contact us directly, please call 800-861-4951.</p>
+            <p><span class="rtxt btxt">SMC</span></p>
+
+            <p>141 Howell Drive - Elizabethtown, KY 42701</p>
+            <p>Office: 270-769-2553 - Fax: 270-769-3257</p>
+            <p>General Information: <a class="mail" href="mailto:info@smc.cc">info@smc.cc</a></p>
+            <span class="rtxt"><a class="portal" href="https://smc.teamehub.com/ehub/account/login?ReturnUrl=%2Fehub%2F">EMPLOYEE PORTAL</a></span>
+        </div>
+
+    </body>
+</html>

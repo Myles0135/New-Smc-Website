@@ -1,0 +1,339 @@
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script type="text/javascript"></script>
+        <script src="jquery.min.js"></script>
+        <script>
+            var images = new Array ('Images/kelvyn-ornettte-sol-marte-ayiNwoEo8KE-unsplash.jpg', 'Images/pan-xiaozhen-pj-BrFZ9eAA-unsplash.jpg', 'Images/cesar-carlevarino-aragon-NL_DF0Klepc-unsplash.jpg', 'Images/man-wearing-orange-hard-hat-2760241-2.jpg' );
+            var index = 1;
+
+            function rotateImage() {
+                $('#myImage').fadeOut('slow', function() {
+                    $(this).attr('src', images[index]);
+
+                    $(this).fadeIn('slow', function() {
+                    if (index == images.length-1) {
+                        index = 0;
+                    }
+                    else {
+                        index++;
+                    }
+                    });
+                });
+            }
+        </script>
+        <script>
+            $(document).ready(function() {
+                $( ".super" ).fadeIn( 1700 );
+                setInterval (rotateImage, 4000);
+            });
+
+        </script>
+
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+            }
+        </script>
+
+        <style>
+            .topnav {
+                border-bottom: 1px solid #000000;
+                padding-top: 1%;
+                position: fixed;
+                top: 0;
+                width: 100%;    
+                letter-spacing: 0.8px;
+                padding-bottom: 1.2%;
+                opacity: 1.0;
+                background-color: white;
+                z-index: 99;
+            }
+
+            .container-fluid {
+                padding: 0;
+            }
+
+            .services {
+                display: inline;
+                font-size: 20px;
+                margin-left: 8%;
+                font-family: 'Raleway', sans-serif;
+                font-size: 18px;
+            }
+
+            .quality {
+                display: inline;
+                font-size: 18px;
+                font-family: 'Raleway', sans-serif;
+                margin-left: 7%;
+            }
+
+            .training {
+                display: inline;
+                font-size: 18px;
+                font-family: 'Raleway', sans-serif;
+                margin-left: 10%;
+            }
+
+            .why {
+                display: inline;
+                font-size: 18px;
+                font-family: 'Raleway', sans-serif;
+                margin-left: 10%;
+            }
+
+            .covid {
+                display: inline;
+                font-size: 18px;
+                font-family: 'Raleway', sans-serif;
+                margin-left: 7%;
+                
+            }
+
+            .logo {
+                display: inline-block;
+                margin-left: 5%;
+            }
+
+            .fpage {
+                width: 100%;
+                height: 90%;
+                opacity: 0.9;
+                filter: brightness(50%);
+            }
+
+            .cpage {
+                padding: 0;
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+
+            .super {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'Oswald', sans-serif;
+                font-size: 60px;
+                color: white;
+                display:none;
+            }
+
+            .ctnt {
+                font-family: 'Montserrat', sans-serif;
+                font-weight:400;
+                background-color: #EDEDF7;
+                color: black;
+                padding: 15px;
+                letter-spacing: 1.5px;
+                text-align: center;
+                box-shadow: 2px 2px 7px 1px #B0B0B0;
+            }
+
+            .bdytxt {
+                padding-left: 60px;
+                padding-right: 60px;
+                padding-top: 5%;
+            }
+
+            .ctnt2 {
+                font-family: 'Montserrat', sans-serif;
+                font-weight:400;
+                background-color: black;
+                color: white;
+                padding: 15px;
+                letter-spacing: 1.5px;
+                text-align: center;
+            }
+
+            .rtxt {
+                color: red;
+            }
+
+            .nlogo {
+                float: left;
+                width: 30%;
+                height: 30%;
+                margin-left: 60px;
+            }
+
+            .btxt {
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            ul {
+                list-style-position:inside;
+            }
+
+            .hvr-grow {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-property: transform;
+                transition-property: transform;
+            }
+
+            .container-width {
+                width: 80%;
+                margin-top: 12%;
+            }
+
+            
+            .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+
+            .mail {
+                color: red;
+            }
+
+            .mail:hover {
+                color: #A80505;
+            }
+
+            .title-bar .icon {
+                display: none;
+            }
+
+            @media screen and (max-width: 600px) {
+            .topnav a:not(:fourth-child) {display: none;}
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+            }
+
+            @media screen and (max-width: 600px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            }
+
+            a { 
+                color: inherit;
+                text-decoration: none;
+                }
+
+            a:hover {
+                text-decoration: none !important;
+                color: inherit;
+            }
+
+            .portal:hover {
+                color: #A80505;
+                text-decoration: none;
+            }
+
+            iframe {
+                float: right;
+            }
+
+            .btmp {
+                margin-top: 12%;
+            }
+
+
+            @media only screen and (max-width : 700px) {
+                .nlogo {
+                    height: 20%;
+                    width: 40%; 
+                    margin-left: 0px;
+                    }
+            }
+        </style>
+    </head>
+
+    <body name="top">
+        <div class="topnav">
+            <a href="services.html" class="services animate hvr-grow">Services</a>
+            <a href="quality.html" class="quality animate hvr-grow">Quality</a>
+            <a href="covid.html" class="covid animate hvr-grow">COVID-19</a>
+            <a class="logo animate hvr-grow" href=#top><img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/99470/logo" alt="SRC Logo" width="130" height="50"></a>
+            <a href="training.html" class="training animate hvr-grow">Training</a>
+            <a href="why.html" class="why animate hvr-grow">Why SMC?</a>
+        </div>
+
+        <div class="container-fluid cpage">
+            <img class="fpage" id="myImage" src="Images/kelvyn-ornettte-sol-marte-ayiNwoEo8KE-unsplash.jpg">
+            <div class="super">SUPERIOR MAINTENANCE CO.</div>
+        </div>
+
+        <br>
+        <div class="container ctnt container-width">
+            <p class="bdytxt">Superior Maintenance Co., Inc. (SMC) began operations in the Elizabethtown, KY area in 1988. SMC has grown successfully year by year because of their commitment to quality service.</p>
+            <hr>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/SzhXdi3sSN0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="bdytxt">Our goal is to provide our customers with a quality program that is designed to meet their exact needs and is cost effective. In order to accomplish our goals we hire quality team members, properly train them, and continuously communicate with them through our TQM Management Process. Because of this management philosophy, you can be assured that your facility is being handled by people who care. </p>
+            <br>
+        </div>
+
+        <br>
+        <div class="container ctnt2 container-width">
+            <p class="bdytxt"><span class="rtxt">SMC</span>, headquartered in Kentucky, is a nationwide service provider.</p>
+            <p class="bdytxt"><span class="rtxt">SMC</span> is proud to be a working partner with some of the nation's most respected and recognizable companies.</p>
+            <p class="bdytxt">The question is...can we do the same for you?</p>
+            <p class="bdytxt">The answer is a confident...<span class="rtxt">YES!</span></p>
+            <br>
+        </div>
+
+        <br>
+        <div class="container ctnt container-width">
+            <p class="bdytxt">We have learned much from our partnering relationship with our customers and those lessons have helped promote innovation and continuous improvement. You can be the beneficiary of a qualified supplier that offers the capabilities, the experience and the commitment to deliver the results that you desire and deserve. </p>
+            <p>
+            <br>
+            <br>
+                <img class="nlogo" src="http://www.wongfleming.com/wp-content/uploads/NMSDC-Logo-Transparent.png" alt="NMSDC Logo">
+                <span class="btxt">Industries Served</span>
+                <ul class="bdytxt1">
+                    <li><span>Industrial/Automotive</span></li>
+                    <li><span>Educational Facilities</span></li>
+                    <li><span>Airports</span></li>
+                    <li><span>Pharmaceutical</span></li>
+                    <li><span>Commercial</span></li>
+                    <li><span>Railroad Industry</span></li>
+                </ul>
+            </p>
+            <br>
+            <br>
+        </div>
+
+        <div class="container-fluid ctnt2 btmp">
+            <p class="bdytxt">To contact us directly, please call 800-861-4951.</p>
+            <p><span class="rtxt btxt">SMC</span></p>
+
+            <p>141 Howell Drive - Elizabethtown, KY 42701</p>
+            <p>Office: 270-769-2553 - Fax: 270-769-3257</p>
+            <p>General Information: <a class="mail" href="mailto:info@smc.cc">info@smc.cc</a></p>
+            <span class="rtxt"><a class="portal" href="https://smc.teamehub.com/ehub/account/login?ReturnUrl=%2Fehub%2F">EMPLOYEE PORTAL</a></span>
+        </div>
+    </body>
+
+</html>
