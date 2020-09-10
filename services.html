@@ -18,6 +18,26 @@
             }
             }
         </script>
+        
+        <script>
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+        
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName ("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+
 
         <style>
             .topnav {
@@ -31,48 +51,55 @@
                 opacity: 1.0;
                 background-color: white;
                 z-index: 99;
+                text-align: center;
+                display: inline-block;
+                list-style-type: none;
+                text-transform: uppercase;
+
+            }
+
+            .container-fluid {
+                padding: 0;
             }
 
             .services {
                 display: inline;
                 font-size: 20px;
-                font-family: 'Raleway', sans-serif;
-                font-size: 18px;
-                margin-left: 8%;
+                font-family: 'Oswald', sans-serif;
             }
 
             .quality {
                 display: inline;
-                font-size: 18px;
-                font-family: 'Raleway', sans-serif;
-                margin-left: 7%;
+                font-size: 20px;
+                font-family: 'Oswald', sans-serif;
+                margin-left: 10%;
             }
 
             .training {
                 display: inline;
-                font-size: 18px;
-                font-family: 'Raleway', sans-serif;
-                margin-left: 10%;
+                font-size: 20px;
+                font-family: 'Oswald', sans-serif;
+                margin-right: 10%;
             }
 
             .why {
                 display: inline;
-                font-size: 18px;
-                font-family: 'Raleway', sans-serif;
-                margin-left: 10%;
+                font-size: 20px;
+                font-family: 'Oswald', sans-serif;
             }
 
             .covid {
                 display: inline;
-                font-size: 18px;
-                font-family: 'Raleway', sans-serif;
+                font-size: 20px;
+                font-family: 'Oswald', sans-serif;
                 margin-left: 7%;
                 
             }
 
             .logo {
                 display: inline-block;
-                margin-left: 5%;
+                margin-left: 10%;
+                margin-right: 10%;
             }
 
             .fpage {
@@ -208,17 +235,27 @@
                 padding-left: 0;
             }      
 
-            @media screen and (max-width: 600px) {
-            .container-width {
-                margin-top: 25%;
-            }
+            a { 
+                color: inherit; 
             } 
+
+            a:hover {
+                text-decoration: none;
+                color: inherit;
+            }
 
             .service-image {
                 max-width:40%;
                 max-height:40%;
                 float: right;
+            
             }  
+
+
+            .container-width {
+                    margin-top: 25%;
+            }
+
 
             ul li::before {
                 content: "\2022";  
@@ -230,40 +267,130 @@
                 padding: 4%;
             } 
 
-            a { 
-                color: inherit; 
-            } 
-
-            a:hover {
-                text-decoration: none;
-                color: inherit;
-            }
 
             .portal:hover {
-                color: #A80505;
-                text-decoration: none;
+                    color: #A80505;
+                    text-decoration: none;
+                }
+
+                li {
+                    padding-bottom: 2%;
+                }
+
+                img {
+                    padding: 1%;
+                }
+
+                .btmp {
+                    margin-top: 12%;
+                }
+
+
+            @media screen and (max-width: 600px) {
+                .container-width {
+                    margin-top: 25%;
+                    width: 90%;
+                }
+
+                .bdytxt {
+                        padding-left: 2px;
+                        padding-right: 2px;
+                }
+
+                .service-image {
+                    display: none;
+                }
+
+                .services {
+                    display: none;
+                }
+
+                .quality {
+                    display: none;
+                }
+            
+                .training {
+                    display: none;
+                }
+
+                .why {
+                    display: none;
+                }
+
+                .dropbtn {
+                    font-size: 25px;
+                    font-family: 'Oswald', sans-serif;
+                    float: left;
+                    border: none;
+                    margin-left: 2%;
+                    background-color: white;
+                    color: black;
+                    border: 3px double #000000;
+                }
+
+                .dropbtn:hover {
+                    background-color: black;
+                    color: white;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f1f1f1;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                    font-size: 20px;
+                    margin-top: 10%;
+                }
+
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    font-family: 'Oswald', sans-serif;
+                }
+
+                .dropdown-content a:hover {
+                    color: white;
+                    background-color: black;
+                }
+
+                .dropdown {
+                    position: relative;
+                    margin-top: 1%;
+                }
+
+
+                .show {display:block;}
+
+                .logo {margin-right: 25%;}
+
             }
 
-            li {
-                padding-bottom: 2%;
+            @media screen and (min-width: 601px) {
+
+                .dropdown {display: none;}
             }
 
-            img {
-                padding: 1%;
-            }
-
-            .btmp {
-                margin-top: 12%;
-            }
 
         </style>
     </head>
 
     <body name="top">
         <div class="topnav">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">MENU</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="quality.html">QUALITY</a>
+                        <a href="services.html">SERVICES</a>
+                        <a href="training.html">TRAINING</a>
+                        <a href="why.html">WHY SMC?</a>
+                    </div>
+            </div>
             <a href="#top" class="services animate hvr-grow">Services</a>
             <a href="quality.html" class="quality animate hvr-grow">Quality</a>
-            <a href="covid.html" class="covid animate hvr-grow">COVID-19</a>
             <a class="logo animate hvr-grow" href="index.html"><img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/99470/logo" alt="SRC Logo" width="130" height="50"></a>
             <a href="training.html" class="training animate hvr-grow">Training</a>
             <a href="why.html" class="why animate hvr-grow">Why SMC?</a>
@@ -287,34 +414,34 @@
             <div class="row">
                 <div class="col-6">
                     <ul>
-                        <li>Janitorial</li>
-                        <li>Dry Vacuum</li>
-                        <li>Wet Vacuum</li>
-                        <li>Pest Control</li>
-                        <li>Chemical Cleaning</li>
-                        <li>Paint Shop Services</li>
-                        <li>Industrial Power Wash</li>
-                        <li>Clean Room Maintenance</li>
-                        <li>Water Purification</li>
-                        <li>Janitorial Supplies</li>
-                        <li>Facility Maintenance</li>
-                        <li>Security</li>
+                        <li class="btmp1">Janitorial</li>
+                        <li class="btmp1">Dry Vacuum</li>
+                        <li class="btmp1">Wet Vacuum</li>
+                        <li class="btmp1">Pest Control</li>
+                        <li class="btmp1">Chemical Cleaning</li>
+                        <li class="btmp1">Paint Shop Services</li>
+                        <li class="btmp1">Industrial Power Wash</li>
+                        <li class="btmp1">Clean Room Maintenance</li>
+                        <li class="btmp1">Water Purification</li>
+                        <li class="btmp1">Janitorial Supplies</li>
+                        <li class="btmp1">Facility Maintenance</li>
+                        <li class="btmp1">Security</li>
                     </ul>
                 </div>
 
                 <div class="col-6">
                     <ul>
-                        <li>Construction Clean-up</li>
-                        <li>Preventive Maintenance</li>
-                        <li>Parking Lot Maintenance</li>
-                        <li>Warehouse & Logistics</li>
-                        <li>Industrial Machinery Cleaning</li>
-                        <li>Machinery Maintenance</li>
-                        <li>High Pressure Water Blasting</li>
-                        <li>Water Blasting</li>
-                        <li>Temporary Staffing</li>
-                        <li>Cryogenic Cleaning</li>
-                        <li>Production Support</li>
+                        <li class="btmp1">Construction Clean-up</li>
+                        <li class="btmp1">Preventive Maintenance</li>
+                        <li class="btmp1">Parking Lot Maintenance</li>
+                        <li class="btmp1">Warehouse & Logistics</li>
+                        <li class="btmp1">Industrial Machinery Cleaning</li>
+                        <li class="btmp1">Machinery Maintenance</li>
+                        <li class="btmp1">High Pressure Water Blasting</li>
+                        <li class="btmp1">Water Blasting</li>
+                        <li class="btmp1">Temporary Staffing</li>
+                        <li class="btmp1">Cryogenic Cleaning</li>
+                        <li class="btmp1">Production Support</li>
 
                     </ul>
                 </div>

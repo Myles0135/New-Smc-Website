@@ -8,6 +8,26 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <script type="text/javascript"></script>
         <script src="jquery.min.js"></script>
+
+        <script>
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+        
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName ("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+
         
         <style>
             .topnav {
@@ -21,48 +41,55 @@
                 opacity: 1.0;
                 background-color: white;
                 z-index: 99;
+                text-align: center;
+                display: inline-block;
+                list-style-type: none;
+                text-transform: uppercase;
+
+            }
+
+            .container-fluid {
+                padding: 0;
             }
 
             .services {
                 display: inline;
                 font-size: 20px;
-                font-family: 'Raleway', sans-serif;
-                font-size: 18px;
-                margin-left: 8%;
+                font-family: 'Oswald', sans-serif;
             }
 
             .quality {
                 display: inline;
-                font-size: 18px;
-                font-family: 'Raleway', sans-serif;
-                margin-left: 7%;
+                font-size: 20px;
+                font-family: 'Oswald', sans-serif;
+                margin-left: 10%;
             }
 
             .training {
                 display: inline;
-                font-size: 18px;
-                font-family: 'Raleway', sans-serif;
-                margin-left: 10%;
+                font-size: 20px;
+                font-family: 'Oswald', sans-serif;
+                margin-right: 10%;
             }
 
             .why {
                 display: inline;
-                font-size: 18px;
-                font-family: 'Raleway', sans-serif;
-                margin-left: 10%;
+                font-size: 20px;
+                font-family: 'Oswald', sans-serif;
             }
 
             .covid {
                 display: inline;
-                font-size: 18px;
-                font-family: 'Raleway', sans-serif;
+                font-size: 20px;
+                font-family: 'Oswald', sans-serif;
                 margin-left: 7%;
                 
             }
 
             .logo {
                 display: inline-block;
-                margin-left: 5%;
+                margin-left: 10%;
+                margin-right: 10%;
             }
 
             .fpage {
@@ -194,64 +221,51 @@
 
             .col-md-2 {
                 padding-left: 0;
-            }      
-
-            @media screen and (max-width: 600px) {
-            .container-width {
-                margin-top: 25%;
-            }
-            } 
-
-            .service-image {
-                max-width:40%;
-                max-height:40%;
-                float: right;
-            }  
+            }   
 
             ul {
-                list-style: none;
+                  list-style: none;
                 padding-left: 5%;
             }
 
-            ul li::before { 
-                font-weight: bold; 
-                display: inline-block; 
-                width: 1em; 
-                margin-left: 3%;
-                padding: 4%;
-            } 
+                ul li::before { 
+                    font-weight: bold; 
+                    display: inline-block; 
+                    width: 1em; 
+                    margin-left: 3%;
+                    padding: 4%;
+                } 
 
-            a { 
-                color: inherit; 
-            } 
+                a { 
+                    color: inherit; 
+                } 
 
-            a:hover {
-                text-decoration: none;
-                color: inherit;
-            }
+                a:hover {
+                    text-decoration: none;
+                    color: inherit;
+                }
 
-            .portal:hover {
-                color: #A80505;
-                text-decoration: none;
-            }
+                .portal:hover {
+                    color: #A80505;
+                    text-decoration: none;
+                }
 
-            .ulhdr {
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 600;
-                font-size: 19px;
-                text-align: center;
-                padding-left:5%;
-            }
+                .ulhdr {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 600;
+                    font-size: 19px;
+                    text-align: center;
+                    padding-left:5%;
+                }
 
-            .topspc {
-                padding-top: 35%;
-            }
+                .topspc {
+                    padding-top: 35%;
+                }
 
-            .btmp {
-                margin-top: 12%;
-            }
+                .btmp {
+                    margin-top: 12%;
+                }
 
-            @media only screen and (max-width : 700px) {
                 .topspc {
                     font-size: 15px;
                 }
@@ -259,15 +273,118 @@
                 .ulhdr {
                     font-size: 16px;
                 }
+   
+
+            @media screen and (max-width: 600px) {
+                .container-width {
+                    margin-top: 25%;
+                    width: 90%;
+                } 
+
+
+                .bdytxt {
+                    padding-left: 2px;
+                    padding-right: 2px;
+                }
+
+                .ulhdr {
+                    font-size: 16px;
+                }
+
+                .topspc {
+                    font-size: 12px;
+                }
+            
+                .services {
+                    display: none;
+                }
+
+                .quality {
+                    display: none;
+                }
+            
+                .training {
+                    display: none;
+                }
+
+                .why {
+                    display: none;
+                }
+
+                .dropbtn {
+                    font-size: 25px;
+                    font-family: 'Oswald', sans-serif;
+                    float: left;
+                    border: none;
+                    margin-left: 2%;
+                    background-color: white;
+                    color: black;
+                    border: 3px double #000000;
+                }
+
+                .dropbtn:hover {
+                    background-color: black;
+                    color: white;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f1f1f1;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                    font-size: 20px;
+                    margin-top: 10%;
+                }
+
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    font-family: 'Oswald', sans-serif;
+                }
+
+                .dropdown-content a:hover {
+                    color: white;
+                    background-color: black;
+                }
+
+                .dropdown {
+                    position: relative;
+                    margin-top: 1%;
+                }
+
+
+                .show {display:block;}
+
+                .logo {margin-right: 25%;}
+
             }
+
+            @media screen and (min-width: 601px) {
+
+                .dropdown {display: none;}
+            }
+
+
         </style>
     </head>
 
     <body name="top">
         <div class="topnav">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">MENU</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="quality.html">QUALITY</a>
+                        <a href="services.html">SERVICES</a>
+                        <a href="training.html">TRAINING</a>
+                        <a href="why.html">WHY SMC?</a>
+                    </div>
+            </div>
             <a href="services.html" class="services animate hvr-grow">Services</a>
             <a href="quality.html" class="quality animate hvr-grow">Quality</a>
-            <a href="covid.html" class="covid animate hvr-grow">COVID-19</a>
             <a class="logo animate hvr-grow" href="index.html"><img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/99470/logo" alt="SRC Logo" width="130" height="50"></a>
             <a href=#top class="training animate hvr-grow">Training</a>
             <a href="why.html" class="why animate hvr-grow">Why SMC?</a>
