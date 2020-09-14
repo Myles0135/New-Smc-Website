@@ -62,30 +62,45 @@
                 padding: 0;
             }
 
+            .contact-us {
+                display: inline;
+                font-size: 20px;
+                font-family: 'Oswald', sans-serif;  
+            }
+
+            .insurance {
+                display: inline;
+                font-size: 20px;
+                font-family: 'Oswald', sans-serif;
+                
+            }
+
             .services {
                 display: inline;
                 font-size: 20px;
                 font-family: 'Oswald', sans-serif;
+                margin-left: 6%;
             }
 
             .quality {
                 display: inline;
                 font-size: 20px;
                 font-family: 'Oswald', sans-serif;
-                margin-left: 10%;
+                margin-left: 6%;
             }
 
             .training {
                 display: inline;
                 font-size: 20px;
                 font-family: 'Oswald', sans-serif;
-                margin-right: 10%;
+                margin-right: 6%;
             }
 
             .why {
                 display: inline;
                 font-size: 20px;
                 font-family: 'Oswald', sans-serif;
+                margin-right: 6%;
             }
 
             .covid {
@@ -98,8 +113,8 @@
 
             .logo {
                 display: inline-block;
-                margin-left: 10%;
-                margin-right: 10%;
+                margin-left: 6%;
+                margin-right: 6%;
             }
 
             .fpage {
@@ -252,11 +267,6 @@
             }  
 
 
-            .container-width {
-                    margin-top: 25%;
-            }
-
-
             ul li::before {
                 content: "\2022";  
                 color: red; 
@@ -318,7 +328,7 @@
                 }
 
                 .dropbtn {
-                    font-size: 25px;
+                    font-size: 21px;
                     font-family: 'Oswald', sans-serif;
                     float: left;
                     border: none;
@@ -367,6 +377,10 @@
 
                 .logo {margin-right: 25%;}
 
+                .insurance {display: none;}
+
+                .contact-us {display:none;}
+
             }
 
             @media screen and (min-width: 601px) {
@@ -387,13 +401,16 @@
                         <a href="services.html">SERVICES</a>
                         <a href="training.html">TRAINING</a>
                         <a href="why.html">WHY SMC?</a>
+                        <a href="insurance.html">INSURANCE</a>
                     </div>
             </div>
+            <a href="insurance.html" class="insurance animate hvr-grow">INSURANCE</a>
             <a href="#top" class="services animate hvr-grow">Services</a>
             <a href="quality.html" class="quality animate hvr-grow">Quality</a>
             <a class="logo animate hvr-grow" href="index.html"><img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/99470/logo" alt="SRC Logo" width="130" height="50"></a>
             <a href="training.html" class="training animate hvr-grow">Training</a>
             <a href="why.html" class="why animate hvr-grow">Why SMC?</a>
+            <a href="javascript: document.body.scrollIntoView(false);" class="contact-us animate hvr-grow">CONTACT US</a>
         </div>
 
         <div class="container container-width ctnt">

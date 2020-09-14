@@ -1,11 +1,12 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.css" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <script type="text/javascript"></script>
         <script src="jquery.min.js"></script>
 
@@ -51,7 +52,7 @@
             .container-fluid {
                 padding: 0;
             }
-            
+
             .contact-us {
                 display: inline;
                 font-size: 20px;
@@ -188,10 +189,6 @@
                 font-size: 20px;
             }
 
-            ul {
-                list-style-position:inside;
-            }
-
             .hvr-grow {
                 display: inline-block;
                 vertical-align: middle;
@@ -232,82 +229,95 @@
                 padding: 0;
                 margin: 0;
                 font-size: 17px;
+                list-style-position:inside;
+
             }
 
             .col-md-2 {
                 padding-left: 0;
-            }   
+            }      
 
             ul {
-                  list-style: none;
-                padding-left: 5%;
+                list-style: none;
             }
 
-                ul li::before { 
-                    font-weight: bold; 
-                    display: inline-block; 
-                    width: 1em; 
-                    margin-left: 3%;
-                    padding: 4%;
-                } 
+            ul li::before {
+                content: "\2022";  
+                color: red; 
+                font-weight: bold; 
+                display: inline-block; 
+                width: 1em; 
+                margin-left: 3%;
+                padding: 4%;
+            } 
 
-                a { 
-                    color: inherit; 
-                } 
+            a { 
+                color: inherit; 
+            } 
 
-                a:hover {
-                    text-decoration: none;
-                    color: inherit;
-                }
+            a:hover {
+                text-decoration: none;
+                color: inherit;
+            }
 
-                .portal:hover {
-                    color: #A80505;
-                    text-decoration: none;
-                }
+            .portal:hover {
+                color: #A80505;
+                text-decoration: none;
+            }
 
-                .ulhdr {
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 600;
-                    font-size: 19px;
-                    text-align: center;
-                    padding-left:5%;
-                }
+            .row {
+                background-color: white;
+                letter-spacing: 1px;
+                text-align: left;
+                margin: 25px;
+            }
 
-                .topspc {
-                    padding-top: 35%;
-                }
+            .btmp {
+                margin-top: 12%;
+            }
+            
+            .ebs {
+                margin-bottom: 20%;
+            }
 
-                .btmp {
-                    margin-top: 12%;
-                }
+            .bdyhdr1 {
+                margin-top: 5%;
+                font-size: 28px;
+                text-align: center;
+            }
 
-                .topspc {
-                    font-size: 15px;
-                }
+            .bdyhdr2 {
+                text-align: left;
+                text-decoration: underline;
+                text-transform: uppercase;
+                margin-top: 10%;
+                font-size: 18px;
+            }
 
-                .ulhdr {
-                    font-size: 16px;
-                }
-   
+            .bdytxt1 {
+                text-align: left;
+                margin-bottom: 10%;
+                font-size: 17px;
+                
+            }
+
+            .cntr {
+                text-align: center;;
+            }
 
             @media screen and (max-width: 600px) {
+                
                 .container-width {
-                    margin-top: 25%;
                     width: 90%;
-                } 
-
+                }
 
                 .bdytxt {
-                    padding-left: 2px;
-                    padding-right: 2px;
+                        padding-left: 2px;
+                        padding-right: 2px;
                 }
 
-                .ulhdr {
-                    font-size: 16px;
-                }
-
-                .topspc {
-                    font-size: 12px;
+                .row {
+                    margin: 15px 1px 15px 1px;
                 }
             
                 .services {
@@ -378,14 +388,23 @@
 
                 .insurance {display: none;}
 
-                .contact-us {display:none;}
+                .contact-us {display:none;}                
+                
+                .bdytxt1 {
+                        padding-left: 2px;
+                        padding-right: 2px;
+                }
+
+
+
 
             }
 
             @media screen and (min-width: 601px) {
-
                 .dropdown {display: none;}
             }
+
+
 
 
         </style>
@@ -407,53 +426,46 @@
             <a href="services.html" class="services animate hvr-grow">Services</a>
             <a href="quality.html" class="quality animate hvr-grow">Quality</a>
             <a class="logo animate hvr-grow" href="index.html"><img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/99470/logo" alt="SRC Logo" width="130" height="50"></a>
-            <a href=#top class="training animate hvr-grow">Training</a>
-            <a href="why.html" class="why animate hvr-grow">Why SMC?</a>
+            <a href="training.html" class="training animate hvr-grow">Training</a>
+            <a href=#top class="why animate hvr-grow">Why SMC?</a>
             <a href="javascript: document.body.scrollIntoView(false);" class="contact-us animate hvr-grow">CONTACT US</a>
         </div>
 
         <div class="container container-width ctnt">
-            <p class="bdyhdr">TRAINING</p>
-            <br>
-            <p class="bdytxt"><span class="rtxt">Superior Maintenance Co.</span> believes training commences at the interview process and continues indefinitely. With our TQM initiatives this need is even greater. We have developed a training manual which covers standardized methods for various tasks and safety, but will emphasize training and education in the areas of TQM and team development.</p>
-            <br>
-            <p class="bdytxt">We utilize <span class="rtxt">SMC</span>  Management, team leaders, suppliers, outside consultants, seminars, and workshops to meet our training requirements. Our training manual is supported by videotapes and testing to measure training effectiveness. All <span class="rtxt">SMC</span> employees will participate.</p>
-            <br>
-            <br>
+            <p class="bdyhdr">INSURANCE</p>
+            <p class="bdyhdr1"><span class="rtxt">-SMC-</span></p>
+            <p class="bdyhdr1">EMPLOYEE BENEFIT SOLUTIONS</p>
+            <p class="bdyhdr2">Employee Onboarding</p>
+                <p class="bdytxt1">We are on the front lines when comes to integrating your new employees to your benefits programs.  We will walk them through the plan offerings and help educate them so that they can make the best decision for themselves and their families.</p>
+            <p class="bdyhdr2">Open Enrollment Management/Facilitation</p>
+                <p class="bdytxt1">We will work with you and your HR team in communicating any new plans changes and be there too proactively answer any questions your employees may have about the new plan year.</p>
+            <p class="bdyhdr2">Cost containment strategies</p>  
+                <p class="bdytxt1">We will utilize our team and experience to bring solutions that will not only drive employee engagement but also help control cost while offering a competitive benefit offerings.</p>
         </div>
 
         <div class="container container-width ctnt2">
-            <div class="row">
-                <div class="col-4"> 
-                    <span class="ulhdr rtxt">TYPE OF TRAINING</span>
-                    <ul>
-                        <li class="topspc">Orientation</li>
-                        <li class="topspc">On-The-Job Training</li>
-                        <li class="topspc">Classroom Training</li>
-                    </ul>
-                </div>
-
-                <div class="col-4">
-                    <span class="ulhdr rtxt">PERFORMED BY</span>
-                    <ul>
-                        <li class="topspc">Team Leader or Training Coach</li>
-                        <li class="topspc">Training Manager/Coach, Team Leader</li>
-                        <li class="topspc">Training Manager/Coach, Team Leader</li>
-                    </ul>
-                </div>
-
-                <div class="col-4">
-                    <span class="ulhdr rtxt">BENEFITS</span>
-                    <ul>
-                        <li class="topspc">Positive First Impression</li>
-                        <li class="topspc">Creates A Lasting Memory</li>
-                        <li class="topspc">Makes The Worker Feel Important</li>
-                    </ul>
-                </div>
-            </div>
+            <p class="bdyhdr1 rtxt">EXECUTIVE BENEFITS</p>
+            <p class="bdyhdr2">Employee Education and Communication</p>
+                <p class="bdytxt2">Many employees do not recognize the full value of their benefit packages because they do not understand them. We can help educate employees about their benefits and how to best use their plan.</p>
+            <p class="bdyhdr2">Group life insurance</p>
+                <p class="bdytxt2">Is an integral part of most employee benefits packages. When provided by an employer, employees appreciate the value of life coverage and the additional security it provides to their families.</p>
+            <p class="bdyhdr2">Group Medical Plans</p>
+                <p class="bdytxt2">Today more than ever, employers require seasoned insurance professionals who understand the impact of complex state and federal regulations on group health insurance. SMC can guide you through these challenges.</p>
+            <p class="bdyhdr2">Group Vision Plans</p>
+                <p class="bdytxt2">Eye health is a critical part of a person’s overall health at any age. SMC can provide comprehensive vision coverage for your employees.</p>
+            <p class="bdyhdr2">Risk Management</p>
+                <p class="bdytxt2">One of the most crucial parts of any effective employee benefits package is a wellness / risk management program that is integrated with your corporate culture, and overall employee benefit objectives.</p>
+            <p class="bdyhdr2">Voluntary Benefits</p>
+                <p class="bdytxt2">Voluntary insurance covers a wide range of benefit options, and is often used to help employees secure individual life and disability coverage regardless of their medical histories.</p>
+            <p class="bdyhdr2">Wellness</p>
+                <p class="bdytxt2">Wellness programs have become more popular in today’s work environment than ever before. In fact, wellness programs are now usually a part of a company’s benefits package. Wellness is less about being ill and more about keeping your body in good condition for longevity.</p>
+            <p class="bdyhdr2">Plan Administration</p>
+                <p class="bdytxt2">With all of the complexities of employee benefits and plan design, combined with ongoing changes to benefit legislation, it usually takes someone with a deeper knowledge of benefits to ensure your employees are receiving the right information.</p>
+            <p class="bdyhdr2">Group Dental Plans</p>
+                <p class="bdytxt2">Dental insurance provides a powerful incentive for your employees and their families to protect their health through preventive dental services. It covers both basic and major services, easing the financial burden of dental health.</p>
         </div>
 
-        <div class="container-fluid ctnt3 btmp">
+        <div class="container-fluid ctnt2 btmp cntr">
             <p class="bdytxt">To contact us directly, please call 800-861-4951.</p>
             <p><span class="rtxt btxt">SMC</span></p>
 
@@ -462,5 +474,7 @@
             <p>General Information: <a class="mail" href="mailto:info@smc.cc">info@smc.cc</a></p>
             <span class="rtxt"><a class="portal" href="https://smc.teamehub.com/ehub/account/login?ReturnUrl=%2Fehub%2F">EMPLOYEE PORTAL</a></span>
         </div>
-    </body>
+
+    </body>    
+
 </html>
